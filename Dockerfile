@@ -41,11 +41,11 @@ RUN $ANDROID_HOME/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSIO
     "platform-tools" | grep -v = || true
 
 RUN $ANDROID_HOME/tools/bin/sdkmanager emulator | grep -v = || true
-RUN $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-25;google_apis;arm64-v8a" | grep -v = || true
+RUN $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-29;google_apis;x86" | grep -v = || true
 
 RUN yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 
-RUN $ANDROID_HOME/tools/bin/avdmanager create avd -n mynexus -k "system-images;android-25;google_apis;arm64-v8a" --tag "google_apis" --device "Nexus 5"
+RUN $ANDROID_HOME/tools/bin/avdmanager create avd -n mynexus -k "system-images;android-29;google_apis;x86" --tag "google_apis" --device "Nexus 5"
 
 RUN apt-get update && apt-get -y install android-tools-adb android-tools-fastboot
 
