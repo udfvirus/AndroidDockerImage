@@ -14,4 +14,3 @@ jobs:
         name: javavirys/androidsdk:v1
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        tags: "latest,${{ env.RELEASE_VERSION }}"
