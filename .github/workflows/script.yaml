@@ -1,7 +1,5 @@
 name: 'Android Builder'
-on:
-  push:
-  pull-request:
+on:  push
 jobs:
   test-job:
     runs-on: ubuntu-latest
