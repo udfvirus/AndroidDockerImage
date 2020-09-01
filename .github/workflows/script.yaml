@@ -13,4 +13,5 @@ jobs:
       run: 
         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
     - name: LS
+      working-directory: ${{ github.workspace }}
       run: ls
