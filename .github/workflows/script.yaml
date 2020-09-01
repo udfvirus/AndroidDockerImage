@@ -10,8 +10,6 @@ jobs:
         FIRST_NAME: Mona
         MIDDLE_NAME: The
         LAST_NAME: Octocat
-      run: 
+      run: | 
         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
-    - name: LS
-      working-directory: ${{ github.workspace }}
-      run: ls
+        ls
