@@ -8,6 +8,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: javavirys/androidsdk:action_v1
+        name: javavirys/${{ secrets.IMAGE_NAME }}:${{ secrets.IMAGE_VERSION }}
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+        buildargs: ${{ secrets.ANDROID_COMPILE_SDK }},${{ secrets.ANDROID_BUILD_TOOLS }},${{ secrets.ANDROID_SDK_TOOLS }}
