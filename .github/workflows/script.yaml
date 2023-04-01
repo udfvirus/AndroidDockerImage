@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@v5
+      uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: javavirys/android:${{ secrets.ANDROID_BUILD_TOOLS }}
         username: ${{ secrets.DOCKER_USERNAME }}
